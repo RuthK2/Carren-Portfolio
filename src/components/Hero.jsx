@@ -102,7 +102,7 @@ const Hero = ({ profile, social }) => {
   const [showCursor, setShowCursor] = useState(true);
   const [activeBadge, setActiveBadge] = useState(0);
 
-  const fullText = "Senior Software Engineer & AI Specialist";
+  const fullText = "AI Content Reviewer & Annotation Specialist";
 
   // Typing animation
   useEffect(() => {
@@ -142,9 +142,9 @@ const Hero = ({ profile, social }) => {
   ];
 
   const badges = [
-    { text: '🏆 Award-Winning Developer', color: 'from-yellow-500/20 to-orange-500/20', border: 'border-yellow-500/30' },
-    { text: '🤖 AI/ML Specialist', color: 'from-purple-500/20 to-pink-500/20', border: 'border-purple-500/30' },
-    { text: '⚡ 8+ Years Experience', color: 'from-cyan-500/20 to-blue-500/20', border: 'border-cyan-500/30' },
+    { text: '🧠 PhD — Computational Chemistry', color: 'from-purple-500/20 to-pink-500/20', border: 'border-purple-500/30' },
+    { text: '🏷️ RLHF & SFT Annotation Expert', color: 'from-yellow-500/20 to-orange-500/20', border: 'border-yellow-500/30' },
+    { text: '⚡ 4+ Years AI Content Review', color: 'from-cyan-500/20 to-blue-500/20', border: 'border-cyan-500/30' },
   ];
 
   return (
@@ -292,7 +292,7 @@ const Hero = ({ profile, social }) => {
               <div className="absolute inset-0 bg-primary-500/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </motion.a>
             <motion.a
-              href="/Hamman_Muraya_Complete_CV.pdf"
+              href="/Carren_Kirwa_CV.pdf"
               className="px-8 py-3 rounded-full glass text-white font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2 relative overflow-hidden group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -335,7 +335,7 @@ const Hero = ({ profile, social }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
           >
-            {['React', 'Python', 'AI/ML', 'Node.js', 'AWS', 'PostgreSQL'].map((tech, i) => (
+            {['RLHF', 'Python', 'AI/ML', 'Red-Teaming', 'Scale AI', 'Computational Chemistry'].map((tech, i) => (
               <motion.span
                 key={tech}
                 className="px-4 py-2 rounded-full glass text-xs font-medium text-gray-400"

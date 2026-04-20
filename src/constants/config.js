@@ -1,13 +1,13 @@
-// Configuration constants for Hamman Muraya's portfolio
+// Configuration constants for Carren Kirwa's portfolio
 
 export const PERSONAL_INFO = {
-  name: "Hamman Muraya",
-  title: "Senior Software Engineer & AI Specialist",
-  email: "hamanmuraya009@gmail.com",
-  location: "Auburn, WA, USA",
-  github: "https://github.com/MurayaSoftTouch",
-  linkedin: "https://linkedin.com/in/haman-softwaredev",
-  portfolio: "https://hamanporfolio.vercel.app/",
+  name: "Carren Kirwa",
+  title: "PhD Computational Chemist & Mathematical Modeller | AI Data Scientist | STEM Expert Evaluator",
+  email: "carrenkirwa@gmail.com",
+  location: "United Kingdom",
+  github: "",
+  linkedin: "",
+  portfolio: "",
 };
 
 export const NAVIGATION = [

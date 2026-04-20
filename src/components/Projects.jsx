@@ -361,7 +361,7 @@ const Projects = ({ projects }) => {
           className={`grid ${viewMode === 'grid' ? 'md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'} gap-8`}
           layout
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence>
             {filteredProjects?.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
             ))}
@@ -388,7 +388,7 @@ const Projects = ({ projects }) => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <motion.a
-            href="https://github.com/MurayaSoftTouch"
+            href="https://github.com/carrenkirwa"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full glass text-white font-semibold hover:bg-white/10 transition-all duration-300"

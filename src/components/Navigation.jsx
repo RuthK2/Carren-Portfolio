@@ -90,7 +90,7 @@ const Navigation = () => {
               >
                 <FaUserAstronaut className="text-xl text-white" />
               </motion.div>
-              <span className="hidden sm:inline group-hover:text-primary-400 transition-colors">Hamman.dev</span>
+              <span className="hidden sm:inline group-hover:text-primary-400 transition-colors">Carren.dev</span>
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -229,7 +229,7 @@ const Navigation = () => {
                 >
                   <FaUserAstronaut className="text-lg text-white" />
                 </motion.div>
-                <span>Hamman.dev</span>
+                <span>Carren.dev</span>
               </motion.div>
               <motion.button
                 onClick={() => setIsMobileMenuOpen(false)}

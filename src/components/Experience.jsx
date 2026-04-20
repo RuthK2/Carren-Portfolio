@@ -307,7 +307,7 @@ const Experience = ({ experience }) => {
           transition={{ duration: 0.6, delay: 1 }}
         >
           <motion.a
-            href="/Hamman_Muraya_Complete_CV.pdf"
+            href="/Carren_Kirwa_CV.pdf"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 text-white font-semibold hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300 relative overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

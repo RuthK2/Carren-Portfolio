@@ -1,4 +1,4 @@
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import { FaSearch, FaFilter, FaSortAmountDown, FaSortAmountUp, FaStar, FaChartBar } from 'react-icons/fa';
@@ -83,9 +83,10 @@ const SkillCard = ({ skill, index, isInView, onHover }) => {
               <i className={`${skill.icon}`} style={{ color: skill.color }} />
               {/* Orbiting Ring */}
               <motion.div
-                className="absolute inset-0 rounded-xl border-2 border-white/20"
+                className="absolute -inset-1.5 rounded-xl border-2 border-white/30 pointer-events-none"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                style={{ zIndex: 10 }}
               />
             </motion.div>
             <motion.span
@@ -168,7 +169,7 @@ const Skills = ({ skills }) => {
     ?.filter(skill => {
       const matchesSearch = skill.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' ||
-        skill.name.toLowerCase().includes(selectedCategory.toLowerCase());
+        (skill.category && skill.category === selectedCategory);
       return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {

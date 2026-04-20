@@ -1,10 +1,10 @@
 {
-  "name": "hamman-muraya-portfolio",
+  "name": "judy-ndungu-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Senior Software Engineer & AI Training Specialist Portfolio",
-  "author": "Hamman Muraya",
+  "description": "AI Content Reviewer & Annotation Specialist Portfolio",
+  "author": "Judy Ndungu",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

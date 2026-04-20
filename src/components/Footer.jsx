@@ -18,10 +18,9 @@ const Footer = ({ profile }) => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: 'fa-github', href: profile?.social?.github, color: 'hover:text-white' },
-    { name: 'LinkedIn', icon: 'fa-linkedin', href: profile?.social?.linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', icon: 'fa-twitter', href: profile?.social?.twitter, color: 'hover:text-sky-400' },
-    { name: 'Email', icon: 'fa-envelope', href: `mailto:${profile?.email}`, color: 'hover:text-red-400' },
+    { name: 'GitHub', icon: 'fa-brands fa-github', href: profile?.social?.github, color: 'hover:text-white' },
+    { name: 'LinkedIn', icon: 'fa-brands fa-linkedin', href: profile?.social?.linkedin, color: 'hover:text-blue-400' },
+    { name: 'Email', icon: 'fa-solid fa-envelope', href: `mailto:${profile?.email}`, color: 'hover:text-red-400' },
   ];
 
   const contactInfo = [
@@ -102,8 +101,8 @@ const Footer = ({ profile }) => {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Building digital experiences that matter. Specialized in AI training,
-              scalable systems, and full-stack development.
+              AI Content Reviewer & Annotation Specialist with 4+ years of high-volume
+              experience. PhD-qualified. Available remotely — UK Time Zone.
             </p>
 
             {/* Social Links with Orbit Effect */}
@@ -121,7 +120,7 @@ const Footer = ({ profile }) => {
                 >
                   {/* Hover Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <i className={`fa-brands ${link.icon} text-xl relative z-10`} />
+                  <i className={`${link.icon} text-xl relative z-10`} />
                 </motion.a>
               ))}
             </div>

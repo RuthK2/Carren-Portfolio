@@ -1,4 +1,5 @@
-// Portfolio data for Carren Kirwa
+// Local portfolio data - No Supabase required
+// This file provides fallback data when Supabase is not configured
 
 export const PROFILE_DATA = {
   name: "Carren Kirwa",
@@ -193,58 +194,63 @@ export const EXPERIENCE_DATA = [
 export const PROJECTS_DATA = [
   {
     id: 1,
-    title: "AI Evaluation Rubric Framework",
-    type: "AI Quality Assurance",
+    name: "AI Evaluation Rubric Framework",
     description: "Comprehensive rubric-based evaluation system for assessing AI-generated STEM content across dimensions of factual accuracy, logical coherence, clarity, completeness, safety, and tone. Includes decision trees, gold-standard calibration tasks, and inter-annotator agreement tooling.",
+    image: "https://images.pexels.com/photos/6303596/pexels-photo-6303596.jpeg",
     tags: ["AI Evaluation", "Rubric Design", "RLHF", "SFT", "Quality Assurance"],
-    year: "2024",
-    category: "AI/ML",
-    link: null,
-    image: "https://images.pexels.com/photos/6303596/pexels-photo-6303596.jpeg"
+    featured: true,
+    github_url: "",
+    live_url: null
   },
   {
     id: 2,
-    title: "Python Scientific Verification Suite",
-    type: "Scientific Computing",
+    name: "Python Scientific Verification Suite",
     description: "Python-based verification toolkit for validating AI-generated scientific and mathematical outputs. Uses NumPy, SciPy, SymPy, and pandas to reproduce and cross-check derivations, numerical results, and statistical claims prior to deployment in model training pipelines.",
+    image: "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg",
     tags: ["Python", "NumPy", "SciPy", "SymPy", "Scientific Verification"],
-    year: "2023",
-    category: "Scientific Computing",
-    link: null,
-    image: "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg"
+    featured: true,
+    github_url: "",
+    live_url: null
   },
   {
     id: 3,
-    title: "Red-Teaming Adversarial Prompt Library",
-    type: "AI Safety",
+    name: "Red-Teaming Adversarial Prompt Library",
     description: "Curated library of adversarial prompts designed to surface hallucination, scientific misinformation, numerical errors, and unsafe content in large language models. Includes documented failure modes and structured findings to guide model improvement teams.",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
     tags: ["Red-Teaming", "Adversarial Prompts", "LLM Safety", "Hallucination Detection"],
-    year: "2024",
-    category: "AI Safety",
-    link: null,
-    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg"
+    featured: true,
+    github_url: "",
+    live_url: null
   },
   {
     id: 4,
-    title: "Field Data Collection & GPS Mapping System",
-    type: "Data Collection",
+    name: "Field Data Collection & GPS Mapping System",
     description: "Structured digital field data collection workflow using ODK, KoBoCollect, and KIAMIS for agricultural and monitoring & evaluation projects. Includes GPS mapping protocols, enumerator training materials, and data quality standards.",
+    image: "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg",
     tags: ["ODK", "KoBoCollect", "KIAMIS", "GPS Mapping", "Field Surveys"],
-    year: "2022",
-    category: "Data Collection",
-    link: null,
-    image: "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg"
+    featured: false,
+    github_url: "",
+    live_url: null
   },
   {
     id: 5,
-    title: "Computational Chemistry Research — AstraZeneca",
-    type: "Research",
+    name: "Computational Chemistry Research — AstraZeneca",
     description: "Pharmaceutical R&D research applying computational chemistry, statistical modelling, and machine learning. Authored original research-level problems with Python-verified solutions, directly supporting AI model training initiatives in scientific domains.",
+    image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg",
     tags: ["Computational Chemistry", "Pharmaceutical R&D", "Python", "Machine Learning", "Statistical Modelling"],
-    year: "2023",
-    category: "Research",
-    link: null,
-    image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg"
+    featured: false,
+    github_url: "",
+    live_url: null
+  },
+  {
+    id: 6,
+    name: "Annotator Guideline & Decision-Tree Authoring",
+    description: "End-to-end authoring of annotator guidelines, edge-case appendices, and decision trees for STEM, data science, machine learning, and biology evaluation tasks at Scale AI and Appen — ensuring consistent, high-quality reviewer output at scale.",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    tags: ["Guideline Authoring", "Decision Trees", "STEM", "Data Science", "Annotation QA"],
+    featured: false,
+    github_url: "",
+    live_url: null
   }
 ];
 
@@ -299,38 +305,5 @@ export const CERTIFICATIONS_DATA = [
     issuer: "Various",
     date: "2021-01-01",
     credential_id: ""
-  }
-];
-
-export const SERVICES_DATA = [
-  {
-    title: "AI Content Review & Annotation",
-    details: [
-      "RLHF & SFT Annotation Workflows",
-      "Rubric-Based Text Evaluation",
-      "Side-by-Side Preference Ranking",
-      "Misleading & Unsafe Content Flagging",
-      "Ground-Truth Validation"
-    ]
-  },
-  {
-    title: "Scientific & Technical Evaluation",
-    details: [
-      "Multi-Domain STEM Content Review",
-      "Python-Based Scientific Verification",
-      "Hallucination & Misinformation Detection",
-      "Red-Teaming & Adversarial Prompt Design",
-      "Research-Level Problem Authoring"
-    ]
-  },
-  {
-    title: "Annotation QA & Guideline Authoring",
-    details: [
-      "Annotator Guideline & Decision-Tree Writing",
-      "Dataset QA & Inter-Annotator Calibration",
-      "Gold-Standard & Honeypot Task Design",
-      "Label Drift & Schema Error Detection",
-      "Field Data Collection (ODK, KoBoCollect, KIAMIS)"
-    ]
   }
 ];

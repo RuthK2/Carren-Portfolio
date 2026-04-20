@@ -7,7 +7,7 @@ const ContactInfo = ({ icon: Icon, label, value, href, index, isInView, color })
   return (
     <motion.a
       href={href}
-      className="group relative flex items-center gap-4 p-5 rounded-xl glass hover:bg-white/5 transition-all duration-300 overflow-hidden"
+      className="group relative flex items-center gap-4 p-5 rounded-xl glass hover:bg-white/5 transition-all duration-300"
       initial={{ opacity: 0, x: -30 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ delay: index * 0.15 }}
@@ -17,14 +17,15 @@ const ContactInfo = ({ icon: Icon, label, value, href, index, isInView, color })
       <div className={`absolute inset-0 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
       
       {/* Icon with Ring */}
-      <div className="relative">
+      <div className="relative w-14 h-14 flex-shrink-0">
         <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
           <Icon className="text-2xl text-white" />
         </div>
         <motion.div
-          className="absolute -inset-1 rounded-xl border-2 border-white/20"
+          className="absolute -inset-1.5 rounded-xl border-2 border-white/30 pointer-events-none"
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+          style={{ zIndex: 10 }}
         />
       </div>
       
@@ -53,6 +54,7 @@ const Contact = ({ profile, contact, onSubmitMessage }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [charCount, setCharCount] = useState(0);
   const [errors, setErrors] = useState({});
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -92,8 +94,8 @@ const Contact = ({ profile, contact, onSubmitMessage }) => {
   ];
 
   const quickContacts = [
-    { icon: FaWhatsapp, label: 'WhatsApp', color: 'from-green-500 to-green-600' },
-    { icon: FaTelegram, label: 'Telegram', color: 'from-blue-400 to-blue-500' },
+    { icon: FaWhatsapp, label: 'WhatsApp', color: 'from-green-500 to-green-600', href: 'https://wa.me/?text=Hi%20Carren%2C%20I%20found%20your%20portfolio%20and%20would%20love%20to%20connect!' },
+    { icon: FaTelegram, label: 'Telegram', color: 'from-blue-400 to-blue-500', href: 'https://t.me/carrenkirwa' },
   ];
 
   return (
@@ -171,7 +173,9 @@ const Contact = ({ profile, contact, onSubmitMessage }) => {
                 {quickContacts.map((qc, index) => (
                   <motion.a
                     key={qc.label}
-                    href="#"
+                    href={qc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`flex-1 py-3 rounded-xl bg-gradient-to-r ${qc.color} text-white font-medium flex items-center justify-center gap-2`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -231,20 +235,24 @@ const Contact = ({ profile, contact, onSubmitMessage }) => {
                 🌐 Follow Me
               </h3>
               <div className="flex gap-4 flex-wrap">
-                {['github', 'linkedin', 'twitter', 'instagram'].map((social, index) => (
+                {[
+                  { key: 'github', icon: 'fa-brands fa-github', color: 'hover:text-white' },
+                  { key: 'linkedin', icon: 'fa-brands fa-linkedin', color: 'hover:text-blue-400' },
+                  { key: 'email', icon: 'fa-solid fa-envelope', href: `mailto:${profile?.email}`, color: 'hover:text-red-400' },
+                ].map((item, index) => (
                   <motion.a
-                    key={social}
-                    href={profile?.social?.[social]}
-                    target="_blank"
+                    key={item.key}
+                    href={item.href || profile?.social?.[item.key]}
+                    target={item.href ? undefined : '_blank'}
                     rel="noopener noreferrer"
-                    className="w-14 h-14 rounded-xl glass flex items-center justify-center text-2xl text-gray-400 hover:text-white hover:bg-primary-500/20 transition-all duration-300"
+                    className={`w-14 h-14 rounded-xl glass flex items-center justify-center text-2xl text-gray-400 ${item.color} hover:bg-primary-500/20 transition-all duration-300`}
                     whileHover={{ scale: 1.15, y: -8, rotate: 360 }}
                     whileTap={{ scale: 0.9 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.6 + index * 0.1 }}
                   >
-                    <i className={`fa-brands fa-${social}`} />
+                    <i className={item.icon} />
                   </motion.a>
                 ))}
               </div>
